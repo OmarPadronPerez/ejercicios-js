@@ -1,0 +1,24 @@
+.pantalla{
+    border-style: inset;
+    width: 200px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.boton{
+    font-size: large;
+    width: 30px;
+    height:30px;
+    margin: 5px;
+}
+.boton_grande{
+    font-size: large;
+    width: 75px;
+    height:30px;
+    margin: 5px;
+}
+.botonxl{
+    font-size: large;
+    width:165px;
+    height:30px;
+    margin: 5px;
+}

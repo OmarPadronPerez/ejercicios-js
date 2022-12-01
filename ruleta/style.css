@@ -1,0 +1,75 @@
+.regla{
+    border: 1px solid red;
+}
+body{
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size:    cover;
+}
+.tablero{
+    background-image: url("img/elemento1.png");
+    background-repeat: no-repeat;
+    background-size:    contain;
+    width: 600px;
+    height: 620px;
+}
+.oferta{
+    /*border: 1px solid blue;*/
+    margin: 10px;
+}
+.oferta img{
+    width: 100%;
+    height: 100%;
+}
+.boton{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.textoBoton{
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.active{
+    border: 10px solid rgb(247, 243, 10);
+}
+.centro{
+    margin-top: 50px; 
+    margin-bottom:50px;
+}
+
+.modal-body{
+    text-align: center;
+    width: 100%;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 
