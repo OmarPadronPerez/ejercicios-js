@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>LA CARRERA DE OBSTÁCULOS</h1>
+    <p> Crea una función que evalúe si un/a atleta ha superado correctamente una
+        carrera de obstáculos.</p>
+    - La función recibirá dos parámetros:
+    <ul>
+        <li> Un array que sólo puede contener String con las palabras "run" o "jump"</li>
+        <li> Un String que represente la pista y sólo puede contener "_" (suelo) o "|" (valla)</li>
+    </ul>
+    - La función imprimirá cómo ha finalizado la carrera:
+    <ul>
+        <li>Si el/a atleta hace "run" en "_" (suelo) y "jump" en "|" (valla) será correcto y no</li>
+        <li>variará el símbolo de esa parte de la pista.</li>
+        <li>Si hace "jump" en "_" (suelo), se variará la pista por "x".</li>
+        <li>Si hace "run" en "|" (valla), se variará la pista por "/".</li>
+    </ul>
+         La función retornará un Boolean que indique si ha superado la carrera.
+    <br> Para ello tiene que realizar la opción correcta en cada tramo de la pista.
+    <br>
+    <form action="" onsubmit='event.preventDefault()'>
+        <label for="jugador1">jugador 1</label> <input id="jugador1" type="text">
+        <br>
+        <label for="jugador2">jugador 2</label> <input id="jugador2" type="text">
+        <br><br>
+        <input id="boton" type="submit" value="correr" onclick="correr()">
+    </form>
+    <br>
+    <div id="resultado"></div>
+    <style>
+        table{
+            border-style: inset;
+        }
+        td{
+            width: 30px;
+            border: 1px solid #C00;
+            text-align: center;
+        }
+        td:first-child{
+            width: 80px;
+        }
+    </style>
+
+    <script src="carreras.js"></script>
+
+</body>
+
+</html>

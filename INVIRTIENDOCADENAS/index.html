@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INVIRTIENDO CADENAS</h1>
+    
+    <p>  Crea un programa que invierta el orden de una cadena de texto sin usar funciones propias del lenguaje que lo hagan de forma automática.
+    <br> Si le pasamos "Hola mundo" nos retornaría "odnum aloH"</p> 
+    <br><br>
+
+    <form action="" onsubmit='event.preventDefault()'>
+        <label for="cadena">Inserta cadena</label><br>
+        <input id="cadena" type="text">
+
+        <input id="boton" type="submit" value="Revisar" onclick="revisar()">
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        //const boton=document.getElementById("cadena");
+        //boton.addEventListener("click",revisar());
+        const resultado=document.getElementById("resultado");
+
+        function revisar(){
+            let texto=document.getElementById("cadena").value;
+            let nuevo="";
+            for(let i=texto.length-1;i>=0;i--){
+                nuevo+=texto[i];
+            }
+            //console.log(nuevo);
+            resultado.innerHTML=nuevo;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LA SUCESIÓN DE FIBONACCI</h1>
+    <p>Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.
+        La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los 
+        dos anteriores.</p>
+
+    <script>
+        var ant1=0;
+        var ant2=1;
+        var nuevo=0;
+        for(let i=0;i<50;i++){
+            if(i==0){
+                console.log(ant1);
+            }
+            ant1=ant2;
+            ant2=nuevo;
+            nuevo=ant2+ant1;
+            
+            console.log(nuevo);
+        }
+    </script>
+</body>
+</html>

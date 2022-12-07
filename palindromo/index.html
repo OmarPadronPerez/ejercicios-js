@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit='event.preventDefault()'>
+        <label for="palindromo">incerta palindromo</label><br>
+        <input id="palindromo" type="text">
+        <br><br>
+        <input id="boton" type="submit" value="Revisar" onclick="revisar()">
+    </form>
+    <div id="resultado"></div>
+    <script>
+
+        function revisar(){
+            var palabra=document.getElementById("palindromo").value;
+            let escrito="<p>";
+            if(recorrido(palabra.replace(/ /g,'').toUpperCase())){
+                escrito+="La frase es un palindromo";
+            }else{
+                escrito+="La frase <b>NO</b> es un palindromo";
+            }
+            escrito+="</p>"
+            document.getElementById("palindromo").innerHTML=' ';
+            document.getElementById("resultado").innerHTML=escrito;
+            
+            console.log(escrito);
+        }
+        function  recorrido(palabra){
+            var tamano=palabra.length-1;
+            console.log(palabra+" "+tamano);
+            for(let i=0;i<tamano/2;i++){
+                console.log(palabra[i]+"-"+palabra[tamano-i]);
+                if(palabra[i]!=palabra[tamano-i]){
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+    </script>
+</body>
+</html>
