@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisar navegador</title>
+</head>
+
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        //limitado por la version del explorador
+        /*
+        // Opera 8.0+
+        var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+        // Firefox 1.0+
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+
+        // Safari 3.0+ "[object HTMLElementConstructor]" 
+        var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+        // Internet Explorer 6-11
+        var isIE = false || !!document.documentMode;
+
+        // Edge 20+
+        var isEdge = !isIE && !!window.StyleMedia;
+
+        // Chrome 1 - 79
+        var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+        // Edge (based on chromium) detection
+        var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+        // Blink engine detection
+        var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+
+        var output = 'Detecting browsers by ducktyping:<hr>';
+        output += 'isFirefox: ' + isFirefox + '<br>';
+        output += 'isChrome: ' + isChrome + '<br>';
+        output += 'isSafari: ' + isSafari + '<br>';
+        output += 'isOpera: ' + isOpera + '<br>';
+        output += 'isIE: ' + isIE + '<br>';
+        output += 'isEdge: ' + isEdge + '<br>';
+        output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
+        output += 'isBlink: ' + isBlink + '<br>';
+        document.body.innerHTML = output;*/
+
+        //funciona para casi todas las versiones de los navegadores
+        var sBrowser, sUsrAg = navigator.userAgent;
+
+        if (sUsrAg.indexOf("Chrome") > -1) {
+            sBrowser = "Chromium";
+        } else if (sUsrAg.indexOf("Safari") > -1) {
+            sBrowser = "Apple Safari";
+        } else if (sUsrAg.indexOf("Opera") > -1) {
+            sBrowser = "Opera";
+        } else if (sUsrAg.indexOf("Firefox") > -1) {
+            sBrowser = "Mozilla Firefox";
+        } else if (sUsrAg.indexOf("MSIE") > -1) {
+            sBrowser = "Microsoft Internet Explorer";
+        }else if (sUsrAg.indexOf("Edge") > -1) {
+            sBrowser = "Microsoft Internet Explorer";
+        }
+
+        //poner en dom el resultado
+        document.getElementById("resultado").innerHTML="<h1>Usted está utilizando: " + sBrowser+"</h1>";
+
+
+    </script>
+</body>
+
+</html>
