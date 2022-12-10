@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbolito</title>
+</head>
+
+<body>
+    Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
+    <br>1
+    <br>22
+    <br>333
+    <br>4444
+    <br>55555
+    <br><br><br>
+    <h2>respuesta</h2>
+    <div id="resultado"></div>
+    <style>
+        #resultado {
+            text-align: center;
+        }
+    </style>
+    <script>
+        let cadena = "0";
+        for (let i = 0; i < 10; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                cadena += i ;
+                if(j!=i){
+                    cadena+="&nbsp"
+                }
+            }
+            cadena += "<br>";
+        }
+        document.getElementById("resultado").innerHTML = cadena;
+    </script>
+
+</body>
+
+</html>

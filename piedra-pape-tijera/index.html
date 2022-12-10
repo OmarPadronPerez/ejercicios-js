@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PIEDRA, PAPEL, TIJERA</h1>
+
+    <p> Crea un programa que calcule quien gana más partidas al piedra, papel, tijera.</p>
+    <ul>
+        <li>El resultado puede ser: "Player 1", "Player 2", "Tie" (empate)</li>
+        <li>La función recibe un listado que contiene pares, representando cada jugada.</li>
+        <li>El par puede contener combinaciones de "R" (piedra), "P" (papel) o "S" (tijera).</li>
+    </ul>
+
+    <br> <br>
+    <style>
+        .resultado,
+        .juegoPC,
+        .resultado {
+            display: inline;
+        }
+
+        .Pierde {
+            font-size: 20px;
+            color: red;
+        }
+
+        .gana {
+            font-size: 20px;
+            color: green;
+        }
+
+        .empate {
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+
+    <div class="juego"> juego 1
+        <select name="juego" id="juego1">
+            <option value="Piedra" selected>Piedra</option>
+            <option value="Papel">Papel</option>
+            <option value="Tijeras">Tijeras</option>
+        </select>
+        <div class="juegoPC">
+            vs <div class="juegoPC" id="juegopc1"></div>
+        </div>
+        <div class="resultado" id="resultado1"></div>
+    </div>
+    <br>
+    <div class="juego"> juego 2
+        <select name="juego2" id="juego2">
+            <option value="Piedra" selected>Piedra</option>
+            <option value="Papel">Papel</option>
+            <option value="Tijeras">Tijeras</option>
+        </select>
+        <div class="juegoPC">
+            vs <div class="juegoPC" id="juegopc2"></div>
+        </div>
+        <div class="resultado" id="resultado2"></div>
+    </div>
+    <br>
+    <div class="juego"> juego 3
+        <select name="juego2" id="juego3">
+            <option value="Piedra" selected>Piedra</option>
+            <option value="Papel">Papel</option>
+            <option value="Tijeras">Tijeras</option>
+        </select>
+        <div class="juegoPC">
+            vs <div class="juegoPC" id="juegopc3"></div>
+        </div>
+        <div class="resultado" id="resultado3"></div>
+    </div>
+    <br>
+    <input id="boton" type="submit" value="jugar" onclick="jugar()">
+    <br><br>
+    <div id="final"></div>
+
+    <script>
+        function jugar() {
+
+            jugarpc();
+            comparar(1);
+            comparar(2);
+            comparar(3);
+        }
+
+        function jugarpc() {//0-piedra 1-papel 2-Tijeras
+            let resultado = "";
+            for (let i = 1; i < 4; i++) {
+                switch (Math.floor(Math.random() * 3)) {
+                    case 0: resultado = "Piedra";  break;
+                    case 1: resultado = "Papel";   break;
+                    case 2: resultado = "Tijeras"; break;
+                }
+                document.getElementById("juegopc" + i).innerHTML = resultado;
+            }
+
+        }
+
+        function comparar(juego) {
+            const jugador = document.getElementById("juego" + juego).value;
+            const pc = document.getElementById("juegopc" + juego).textContent;
+            const resultado = document.getElementById("resultado" + juego);
+            resultado.classList.remove("empate");
+            resultado.classList.remove("gana");
+            resultado.classList.remove("Pierde");
+
+            if (jugador == pc) {
+                resultado.innerHTML = "empate";
+                resultado.classList.add("empate");
+            }
+
+            if (jugador == "Piedra" && pc == "Papel") {
+                resultado.innerHTML = "gana pc";
+                resultado.classList.add("Pierde");
+            }
+            if (jugador == "Piedra" && pc == "Tijeras") {
+                resultado.innerHTML = "jugador gana";
+                resultado.classList.add("gana");
+            }
+
+            if (jugador == "Tijeras" && pc == "Piedra") {
+                resultado.innerHTML = "gana pc";
+                resultado.classList.add("Pierde");
+            }
+            if (jugador == "Tijeras" && pc == "Papel") {
+                resultado.innerHTML = "jugador gana";
+                resultado.classList.add("gana");
+            }
+
+            if (jugador == "Papel" && pc == "Piedra") {
+                resultado.innerHTML = "jugador gana";
+                resultado.classList.add("gana");
+            }
+            if (jugador == "Papel" && pc == "Tijeras") {
+                resultado.innerHTML = "gana pc";
+                resultado.classList.add("Pierde");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
