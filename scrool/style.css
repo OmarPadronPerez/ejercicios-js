@@ -1,0 +1,27 @@
+.regla div {
+    border: 2px solid red;
+}
+
+.espacio {
+    height: 80px;
+}
+
+.relleno {
+    height: 300px;
+}
+
+.animacion {
+    position: relative;
+}
+
+.animacion div {
+    min-height: 300px;
+}
+
+.animacion .texto {
+    position: absolute;
+}
+
+.objetoMovil .texto {
+    margin: auto;
+}
