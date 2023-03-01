@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>validar cadenas</h1>
+    <p>validar que una oracion tenga sus llaves{}, parentesis() y corchetes[] competos</p>
+    <form action="" onsubmit='event.preventDefault()'>
+        <label for="cadena">Inserta frase</label><br>
+        <input id="cadena" type="text">
+
+        <input id="boton" type="submit" value="Revisar" onclick="revisar(document.getElementById('cadena').value)">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="codigo.js"></script>
+</body>
+</html>

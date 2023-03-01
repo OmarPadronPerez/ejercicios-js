@@ -7,9 +7,8 @@ let inicioY=campo.getBoundingClientRect().y;
 addEventListener("resize",function(){//si la pantalla cambia de tamaño
     inicioX=campo.getBoundingClientRect().x;
     inicioY=campo.getBoundingClientRect().y;
-    console.log("nuevo origen");
+    console.log("cambio de tamaño");
 });
-
 
 campo.addEventListener("click", function (event) {//obtener coordenadas de click dentro de la figura
     console.log(inicioX +","+inicioY);

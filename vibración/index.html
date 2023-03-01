@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <button onclick=window.navigator.vibrate(200);>vibración</button>
+    <br><br>
+    <button onclick="vibrar()">vibración script</button>
+
+    
+    <script>
+        function vibrar(){
+            let tiempos=[200, 100, 200, 100, 300];//vibra, descanso, vibra
+            window.navigator.vibrate(tiempos);
+        }
+        
+    </script>
+
+</body>
+</html>
