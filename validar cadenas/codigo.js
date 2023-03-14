@@ -2,8 +2,6 @@
 const areaRespuestas=document.getElementById("resultado");
 console.log("en JS");
 
-
-
 function revisar(cadena){
     let llave=0;
     let parentesis=0;
