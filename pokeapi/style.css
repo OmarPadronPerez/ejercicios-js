@@ -1,25 +1,48 @@
-main{
+main {
     overflow: hidden;
 }
+
 .regla div {
     border: 1px solid #C00;
-    
+
 }
-.tarjeta{
+.datos{
+    margin: auto;
+}
+.espacio{
+    height: 30px;
+}
+
+.tarjeta {
     margin: 10px;
-    border: 1px solid rgb(31, 0, 204);
+    border: 2px solid black;
     min-height: 100px;
     text-align: center;
+    border-radius: 20px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    /*background: -webkit-linear-gradient(bottom, white 50%,#f8c2c2 50%);  
+    background-color: #FFF0C9;*/
 }
 
+.img-sprite {
+    background-image: url(blob.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {}
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) {
+}
 
 /* Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) { }
+@media (max-width: 991.98px) {}
 
 /* Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {}

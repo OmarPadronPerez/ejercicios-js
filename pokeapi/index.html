@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -15,10 +15,16 @@
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
-  <main class="container-flid">
+
+  <main class="container-fluid">
+    <!--
+    <div class="espacio"></div>
+
+    <form class="d-flex my-2 my-lg-0">
+      <input class="form-control me-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  -->
 
     <div class="row regla">
       <div class="col-1">1</div>
@@ -34,21 +40,50 @@
       <div class="col-1">11</div>
       <div class="col-1">12</div>
     </div>
+    <div class="espacio"></div>
 
-    <div class="row contenedor-pokemon justify-content-between align-items-center g-2"><!--inicio contenedor pokemons-->
+    <div class="row contenedor-pokemon justify-content-center "><!--inicio contenedor pokemons-->
+      <div class="spinner-border text-danger " role="status" id="spinner">
+        <span class="sr-only "></span>
+      </div>
+
       <!--tarjeta
       <div class="col-11 col-md-4 col-lg-3 tarjeta">
-        <div class="col-12" id="imagen">imagen</div>
-        <div class="col-12" id="nombre">#000 nombre</div>
-        <div class="row justify-content-center align-items-center g-2">
-          <div class="col-4" id="tipo">tipo 1 / tipo 2</div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-5" id="imagen">imagen</div>
+
+          <div class="datos col-6">
+            <div class="col-12" id="nombre">#000 nombre</div>
+            <div class="col-12" id="tipo">tipo 1 / tipo 2</div>
+          </div>
         </div>
       </div>-->
 
-
-
-
     </div><!--fin contenedor pokemons-->
+
+    <div class="espacio"></div>
+    <div class="espacio"></div>
+
+
+    <!--paginacion-->
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--/paginacion-->
 
   </main>
   <footer>
@@ -63,7 +98,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
 
-  <script src="codigo.js"></script>
+  <script async src="codigo.js"></script>
 </body>
 
 </html>
