@@ -1,25 +1,25 @@
 console.log("en js");
 const pokemonContainer = document.querySelector(".contenedor-pokemon");
 const spinner = document.getElementById("spinner");
-const tiposArray = [
-    ["flying", "Volador", "#c8f1f4"],
-    ["poison", "Veneno", "#4e0041"],
-    ["bug", "Bicho", "#c0e9d6"],
-    ["fire", "Fuego", "#fa0000"],
-    ["ice", "Hielo", "#b0f0f7"],
-    ["grass", "Planta", "#057100"],
-    ["ground", "Tierra", "#ffb900"],
-    ["rock", "Roca", "#c28d00"],
-    ["normal", "Normal", "#ffffff"],
-    ["fighting", "Lucha", "#f5d8a1"],
-    ["ghost", "Fantasma", "#e2cdff"],
-    ["steel", "Acero", "#d3d3d3"],
-    ["water", "Agua", "#0023ff"],
-    ["electric", "Electrico", "#fbff00"],
+const tiposArray = [//el array de tipos en español con sus colores
+    ["flying",  "Volador",  "#c8f1f4"],
+    ["poison",  "Veneno",   "#4e0041"],
+    ["bug",     "Bicho",    "#c0e9d6"],
+    ["fire",    "Fuego",    "#fa0000"],
+    ["ice",     "Hielo",    "#b0f0f7"],
+    ["grass",   "Planta",   "#057100"],
+    ["ground",  "Tierra",   "#ffb900"],
+    ["rock",    "Roca",     "#c28d00"],
+    ["normal",  "Normal",   "#ffffff"],
+    ["fighting","Lucha",    "#f5d8a1"],
+    ["ghost",   "Fantasma", "#e2cdff"],
+    ["steel",   "Acero",    "#d3d3d3"],
+    ["water",   "Agua",     "#0023ff"],
+    ["electric","Electrico","#fbff00"],
     ["psychic", "Psiquico", "#a261d2"],
-    ["dragon", "Dragon", "#8b0000"],
-    ["dark", "Obscuro", "#000000"],
-    ["fairy", "Hada", "#fadef7"]
+    ["dragon",  "Dragon",   "#8b0000"],
+    ["dark",    "Obscuro",  "#000000"],
+    ["fairy",   "Hada",     "#fadef7"]
 
 ]
 
@@ -32,9 +32,9 @@ function buscarpokemon(id) {
         });
 }
 
-function multiplespokemons(cantidad) {
+function multiplespokemons(inicio, fin) {
     spinner.style.display = "block";
-    for (let i = 1; i <= cantidad; i++) {
+    for (let i = inicio; i <= fin; i++) {
 
         buscarpokemon(i);
     }
@@ -55,10 +55,8 @@ function buscartiposcolor(tipoIngles) {
     }
 }
 
-
-
-function crearPokemon(pokemon) {
-
+async function crearPokemon(pokemon) {
+    //crear tarjeta
     const tarjeta = document.createElement('div');
     tarjeta.classList.add('col-11', 'col-sm-5', 'col-lg-3', 'tarjeta');
 
@@ -73,7 +71,6 @@ function crearPokemon(pokemon) {
     const nombre = document.createElement('div');
     nombre.classList.add('col-12');
     nombre.textContent = "#" + pokemon.id.toString().padStart(3, 0) + " " + pokemon.species.name;
-    //tarjeta.style.backgroundColor(pokemon.)
 
     //tipos
     const tipos = document.createElement('div');
@@ -98,11 +95,9 @@ function crearPokemon(pokemon) {
     const datos = document.createElement('div');
     datos.classList.add('datos', 'col-6', 'col-md-12');
 
-
-    row.appendChild(sprite);
-
     datos.appendChild(nombre);
     datos.appendChild(tipos);
+    row.appendChild(sprite);
     row.appendChild(datos);
 
     tarjeta.appendChild(row);
@@ -110,4 +105,5 @@ function crearPokemon(pokemon) {
 
 }
 
-multiplespokemons(9);
+//en ejecucion
+multiplespokemons(1,12);

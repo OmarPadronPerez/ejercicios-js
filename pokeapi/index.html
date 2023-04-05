@@ -17,14 +17,21 @@
 <body>
 
   <main class="container-fluid">
-    <!--
-    <div class="espacio"></div>
 
-    <form class="d-flex my-2 my-lg-0">
-      <input class="form-control me-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
-  -->
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container justify-content-end">
+        </button>
+        <form class="d-flex my-2 my-lg-0 ">
+          <input class="form-control me-sm-2" type="text" placeholder="Search" id="Buscar">
+          <button class="btn  btn-outline-success my-2 my-sm-0" type="submit"
+            onclick="buscarpokemon(document.getElementById('Buscar').value)">
+            Buscar</button>
+        </form>
+      </div>
+    </nav>
+
+
 
     <div class="row regla">
       <div class="col-1">1</div>
@@ -40,6 +47,7 @@
       <div class="col-1">11</div>
       <div class="col-1">12</div>
     </div>
+
     <div class="espacio"></div>
 
     <div class="row contenedor-pokemon justify-content-center "><!--inicio contenedor pokemons-->
@@ -62,23 +70,20 @@
     </div><!--fin contenedor pokemons-->
 
     <div class="espacio"></div>
-    <div class="espacio"></div>
 
 
     <!--paginacion-->
-    <nav aria-label="Page navigation">
+    <nav class="paginacion" aria-label="Page navigation ">
       <ul class="pagination">
-        <li class="page-item disabled">
+        <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
+            <span aria-hidden="true">&laquo; anterior</span>
           </a>
         </li>
-        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
+
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
+            <span aria-hidden="true">siguiente&raquo;</span>
           </a>
         </li>
       </ul>
