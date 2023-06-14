@@ -80,11 +80,9 @@ function ordenar(lista,tipo){
     for (let i = 0; i < nuevo.length; i++) {
         for (let j = 0; j < (nuevo.length - 1); j++) {
             if (nuevo[j][tipo] > nuevo[j + 1][tipo]) {
-                //console.log(nuevo[j][2] + " <--"+ nuevo[j+1][2]);
                 let temp = nuevo[j];
                 nuevo[j] = nuevo[j + 1];
                 nuevo[j + 1] = temp;
-                //imprimirConsola(nuevo)
             }
         }
     }
