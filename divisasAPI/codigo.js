@@ -1,4 +1,6 @@
-//https://apilayer.com/
+console.log("en js");
+//token: f86511f0efa7d60e0fc1771acc92aeab
+//
 
 function obtenerLista(){
     var myHeaders = new Headers();
@@ -16,5 +18,5 @@ function obtenerLista(){
         .then(result => {return result;})
         .catch(error => console.log('error', error));
 }
-console.log("en js");
+
 console.log(obtenerLista());

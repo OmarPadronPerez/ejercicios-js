@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fizz-buzz</h1>
+    <p>se debe imprimir los numero del 1 al 100
+        <br>con los numero divisibles entre 3 se debe imprimir "fizz"
+        <br>con los numero divisibles entre 5 se debe imprimir "buzz"
+        <br>con los numero divisibles entre 3 y 5 se debe imprimir "fizzbuzz"
+    </p>
+
+    <script>
+        for(let i=1;i<101;i++){
+            let imprimir="";
+            if(i%3==0)imprimir+="fizz";
+            if(i%5==0)imprimir+="buzz";
+
+            console.log(i+" "+ imprimir)
+        }
+    </script>
+</body>
+</html>

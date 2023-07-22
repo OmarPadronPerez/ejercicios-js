@@ -26,7 +26,7 @@ function imprimir(lista, divH) {
         imprimir += "<td>" + lista[i][2] + "</td>";
         imprimir += "</tr>";
     }
-    imprimir+= "</table>";
+    imprimir += "</table>";
     divH.innerHTML = imprimir;
 }
 
@@ -74,7 +74,7 @@ function ordenarNombre(lista) {
 imprimir(ordenarEdad(original), htmlEdad);
 imprimir(ordenarNombre(original), htmlNombre);*/
 
-function ordenar(lista,tipo){
+function ordenar(lista, tipo) {
     //0-nombre 2-edad
     let nuevo = lista;
     for (let i = 0; i < nuevo.length; i++) {
@@ -90,6 +90,6 @@ function ordenar(lista,tipo){
 }
 
 imprimir(original, htmlOriginal);
-imprimir(ordenar(original,2), htmlEdad);
-imprimir(ordenar(original,0), htmlNombre);
+imprimir(ordenar(original, 2), htmlEdad);
+imprimir(ordenar(original, 0), htmlNombre);
 

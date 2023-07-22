@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="#">
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input {
+            margin: 2px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+
+    <h1>Implementa una funcion tel que dado un array de enteros y un numero K 
+        devuelda los pares de numeros que suman K</h1>
+    <p>ejemplo
+        <br>dado el array [0,9,7,12,5,8,3]
+        <br>los pares que suman 12 son:
+    <ul>
+        <li>[0,12]</li>
+        <li>[3,9]</li>
+        <li>[5,7]</li>
+    </ul>
+    </p>
+
+    <form onsubmit='event.preventDefault()'>
+        <input id="secuencia" type="text" value="0,9,7,12,5,8,3">
+        <br>
+        <input id="asumar" type="text" value="12">
+        <br>
+        <input id="boton" type="submit" value="Revisar" onclick="correr()">
+    </form>
+
+    <div id="resultados"></div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
