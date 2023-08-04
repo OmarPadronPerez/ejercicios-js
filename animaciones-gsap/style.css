@@ -1,0 +1,74 @@
+:root {
+    --dark: #1d1d1d;
+    --grey-dark: #414141;
+    --light: #fff;
+    --mid: #ededed;
+    --grey: #989898;
+    --gray: #989898;
+    --green: #28a92b;
+    --green-dark: #4e9815;
+    --green-light: #6fb936;
+    --blue: #2c7ad2;
+    --purple: #8d3dae;
+    --red: #c82736;
+    --orange: #e77614;
+    accent-color: var(--green);
+}
+.box, .caja {
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--light);
+}
+/* colors */
+
+.green {
+    background-color: var(--green);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.purple {
+    background-color: var(--purple);
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+    
+.carro .imgcarro{
+    width: 10rem;
+    max-height: 100%;
+}
+.carro .imgfuego{
+    margin-right: -40px;
+    width: 200px;
+    max-height: 100%;
+    z-index: 2;
+}
+
+.cubos{
+    width: 100%;
+    display: inline-flex;
+}
+.cubos div{
+    margin: auto;
+}
+
