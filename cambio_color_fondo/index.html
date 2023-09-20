@@ -30,7 +30,13 @@
         <div>
             <h1>El exadecimal del fondo es</h1>
             <h2 id="colorFondo"> #ffffff </h2>
-            <button onclick="cambioColor()">Cambiar</button>
+            <button onclick="colorAleatorio()">Color aleatorio</button>
+        </div>
+        <br><br>
+        <div>
+            <h1>Usar fondo color</h1>
+            <input type="text" id="colorSeleccion">
+            <button onclick="cambiarFondo( document.getElementById('colorSeleccion').value)">seleccionar Color</button>
         </div>
 
     </div>
